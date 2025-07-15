@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="utils.css">
+</head>
+
+<body>
+
+    <div id="loadingScreen" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+        <div
+            class="loader ease-linear rounded-full border-8 border-yellow-400 h-24 w-24 border-b-transparent border-l-transparent animate-spin">
+        </div>
+    </div>
+
+    <header id="header-section"
+        class="w-full h-20 bg-transparent flex items-center justify-between lg:px-20 px-4 fixed z-20 shadow-md">
+        <!-- Logo -->
+        <div id="logo-container" class="flex items-center">
+            <a href="#" class="flex items-center gap-2">
+                <span class="bg-amber-400 rounded-md px-3 py-1 text-black font-bold text-lg">NEW</span>
+                <span class="font-semibold text-amber-400 text-xl tracking-wide">MOVIE</span>
+            </a>
+        </div>
+        <!-- Navbar -->
+        <nav id="navbar_section" class="hidden md:block">
+            <ul class="flex items-center gap-10 text-white text-[1rem] font-semibold">
+                <li><a href="/src/index.html" class="hover:text-amber-400 transition">Home</a></li>
+                <li><a href="/src/all.html" class="hover:text-amber-400 transition">New Movies</a></li>
+                <li><a href="/src/genre.html" class="hover:text-amber-400 transition">Genre</a></li>
+
+            </ul>
+        </nav>
+        <!-- Account & Search -->
+        <div id="account_section" class="flex items-center gap-4">
+            <button id="search_icon"
+                class="flex items-center justify-center p-2 rounded-full hover:bg-amber-400/20 transition">
+                <ion-icon name="search-sharp" class="w-5 h-5 text-amber-400"></ion-icon>
+            </button>
+            <div
+                class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-black font-bold text-lg shadow">
+                L
+            </div>
+            <!-- Mobile menu button -->
+            <button class="md:hidden flex items-center ml-2" aria-label="Open Menu">
+                <ion-icon name="menu" class="w-7 h-7 text-amber-400"></ion-icon>
+            </button>
+        </div>
+    </header>
+
+
+    <div id="main" class="w-full h-fit text-white bg-black  lg:px-20">
+        <div class="text-white w-full pt-40  h-60">
+            <h1 class="text-6xl font-semibold">Movies</h1>
+            <p class="text-xl mt-4">Movies move us like nothing else can, whether they’re scary, funny, dramatic,
+                romantic or anywhere in-between. So many titles, so much to experience.</p>
+        </div>
+        <br>
+        <br><br><br><br>
+        <div id="movies" class="w-full h-fit ">
+            <!-- <p class="py-5 text-2xl">Action Movies</p>
+            <div class="w-full h-80 flex items-center justify-center gap-4 ">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper text-white">
+
+                    </div>
+                  
+                    <div
+                        class="swiper-button-next custom-swiper-btn !bg-amber-400 !text-black !rounded-full !w-10 !h-10 !flex !items-center !justify-center !shadow-lg hover:!bg-amber-500 transition">
+                    </div>
+                    <div
+                        class="swiper-button-prev custom-swiper-btn !bg-amber-400 !text-black !rounded-full !w-10 !h-10 !flex !items-center !justify-center !shadow-lg hover:!bg-amber-500 transition">
+                    </div>
+                </div>
+            </div> -->
+
+            
+           
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script type="module" src="main.js"></script>
+        <script type="module" src="genre.js"></script>
+
+        <script>
+            // Initialize Swiper for the first container
+            var swiper1 = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 15,
+                navigation: {
+                    nextEl: ".mySwiper .swiper-button-next",
+                    prevEl: ".mySwiper .swiper-button-prev",
+                },
+            });
+
+            // Initialize Swiper for the second container
+            var swiper2 = new Swiper(".mySwiperscifi", {
+                slidesPerView: 3,
+                spaceBetween: 15,
+                navigation: {
+                    nextEl: ".mySwiperscifi .swiper-button-next",
+                    prevEl: ".mySwiperscifi .swiper-button-prev",
+                },
+            });
+        </script>
+</body>
+
+</html>

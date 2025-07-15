@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<style>
+     body::-webkit-scrollbar{
+        display: none;
+    }
+</style>
+<body>
+  <div id="loadingScreen" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+    <div class="loader ease-linear rounded-full border-8 border-yellow-400 h-24 w-24 border-b-transparent border-l-transparent animate-spin"></div>  
+  </div>
+    <header id="header-section"
+        class="w-full h-20 bg-transparent flex items-center justify-between lg:px-20 px-4 fixed z-20 shadow-md">
+        <!-- Logo -->
+        <div id="logo-container" class="flex items-center">
+            <a href="#" class="flex items-center gap-2">
+                <span class="bg-amber-400 rounded-md px-3 py-1 text-black font-bold text-lg">NEW</span>
+                <span class="font-semibold text-amber-400 text-xl tracking-wide">MOVIE</span>
+            </a>
+        </div>
+        <!-- Navbar -->
+        <nav id="navbar_section" class="hidden md:block">
+            <ul class="flex items-center gap-10 text-white  font-semibold">
+                <li><a href="/src/index.html" class="hover:text-amber-400 transition">Home</a></li>
+                <li><a href="/src/all.html" class="hover:text-amber-400 transition">New Movies</a></li>
+                <li><a href="/src/genre.html" class="hover:text-amber-400 transition">Genre</a></li>
+
+            </ul>
+        </nav>
+        <!-- Account & Search -->
+        <div id="account_section" class="flex items-center gap-4">
+            <button id="search_icon"
+                class="flex items-center justify-center p-2 rounded-full hover:bg-amber-400/20 transition">
+                <ion-icon name="search-sharp" class="w-5 h-5 text-amber-400"></ion-icon>
+            </button>
+            <div
+                class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-black font-bold text-lg shadow">
+                L
+            </div>
+            <!-- Mobile menu button -->
+            <button class="md:hidden flex items-center ml-2" aria-label="Open Menu">
+                <ion-icon name="menu" class="w-7 h-7 text-amber-400"></ion-icon>
+            </button>
+        </div>
+    </header>
+
+
+
+
+    <div id="main" class="bg-black w-full h-fit">
+
+        <section class="w-full h-fit pt-28 lg:px-20 px-4">
+            <h2 class="text-3xl font-bold  mb-4 text-white ">Trending Movies</h2>
+            <div id="trending" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-6">
+            </div>
+        </section>
+
+        <!-- All Time Best Section -->
+          <section class="w-full h-fit  pt-28 lg:px-20 px-4">
+            <h2 class="text-3xl font-bold  mb-4 text-white ">All Movies</h2>
+            <div id="more_cards" class="grid grid-cols-1 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-6">
+            </div>
+        </section>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="main.js" type="module"></script>
+    
+</body>
+
+</html>
